@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div  class="Section">
+        <h2>The attendence Maintained by regular students are:</h2>
+        <style>
+            h2{
+                color:black;
+                font-size: 25px;
+                text-decoration: underline;
+            }
+            
+
+
+        </style>
+        <table border="2">
+            <tr>
+                <th>Student_id</th>
+                <th>Total days</th>
+                <th>Present days</th>
+            </tr>
+            {% for presents in attendance %}
+            <tr>
+                <td>{{ presents[0] }}</td>
+                <td>{{ presents[1] }}</td>
+                <td>{{ presents[2] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/">⬅️ Back to Dashboard</a>
+    </div>
+    
+    </div>
+    
+    </body>
+</html>

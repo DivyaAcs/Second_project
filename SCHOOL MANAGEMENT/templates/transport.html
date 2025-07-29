@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transport Routes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="travel">
+        <h3>Route 1</h3>
+        <div class="ABC">
+            {% for place in route1 %}
+                <div class="transport-box">
+                    <p><strong>Place:</strong> {{ place['Places_Name'] }}</p>
+                    <p><strong>Timing:</strong> {{ place['Timings'] }}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <h3>Route 2</h3>
+        <div class="ABC">
+            {% for place in route2 %}
+                <div class="transport-box">
+                    <p><strong>Place:</strong> {{ place['Places_Name'] }}</p>
+                    <p><strong>Timing:</strong> {{ place['Timings'] }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

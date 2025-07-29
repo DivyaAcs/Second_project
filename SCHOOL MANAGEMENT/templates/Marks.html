@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="Marks-section" class="section">
+        <h2>The toppers from our management are:</h2>
+        <style>
+            h2{
+                font-size: 25px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                text-decoration: underline;
+                color:black;
+            }
+        </style>
+        <table border="2">
+            <tr>
+                <th>Student_id</th>
+                <th>Subject Name</th>
+                <th>Marks</th>
+            </tr>
+            {% for mark in marks %}
+            <tr>
+                <td>{{ mark[0] }}</td>
+                <td>{{ mark[1] }}</td>
+                <td>{{ mark[2] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/">⬅️ Back to Dashboard</a>
+    </div>
+    
+</body>
+</html>

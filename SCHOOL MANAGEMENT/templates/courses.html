@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Structure</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="Course-section" class="section">
+
+    <h2>The Courses Offered:</h2>
+    <table border="2">
+        <tr>
+            <th>Course Name</th>
+            <th>Duration of the Course</th>
+            <th>Course fees</th>
+        </tr>
+        {% for course in courses %}
+  <tr>
+    <td>{{ course[0] }}</td>  
+    <td>{{ course[1] }}</td>  
+    <td>{{ course[2] }}</td>  
+  </tr>
+    {% endfor %}
+
+    </table>
+    <a href="/">⬅️ Back to Dashboard</a>
+</div>
+    
+    
+</body>
+</html>
